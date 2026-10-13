@@ -1,0 +1,380 @@
+{
+  "agronomic_constants": {
+    "crop": "Ginger (Zingiber officinale)",
+    "varieties": [
+      {
+        "name": "Local Ginger (Sri Lankan)",
+        "maturity_weeks": 36,
+        "seed_rate_per_acre_kg": 1500,
+        "expected_yield_per_acre_kg": 6500,
+        "rhizome_characteristics": "Pungent, fibrous, smaller rhizomes, high essential oil content",
+        "post_maturity_field_tolerance_weeks": 4
+      },
+      {
+        "name": "Chinese Ginger",
+        "maturity_weeks": 34,
+        "seed_rate_per_acre_kg": 1800,
+        "expected_yield_per_acre_kg": 9000,
+        "rhizome_characteristics": "Large fleshy rhizomes, lower pungency, preferred for fresh culinary use",
+        "post_maturity_field_tolerance_weeks": 3
+      },
+      {
+        "name": "Rangoon Ginger",
+        "maturity_weeks": 38,
+        "seed_rate_per_acre_kg": 1600,
+        "expected_yield_per_acre_kg": 7500,
+        "rhizome_characteristics": "Medium-sized rhizomes with multiple fingers, intermediate pungency",
+        "post_maturity_field_tolerance_weeks": 5
+      }
+    ],
+    "storage_and_curing": {
+      "curing_weight_loss_percentage": 6.5,
+      "recommended_storage_medium": "Dry river sand / Coir dust pits",
+      "optimal_storage_temp_celsius": "20 - 25°C",
+      "relative_humidity_percentage": "65 - 70%",
+      "seed_fungicide_treatment": "Mancozeb 2.5g/L soak for 30 minutes before sand bed storage"
+    }
+  },
+  "regional_economic_centers": [
+    {
+      "center_id": "DEC-DAM",
+      "name": "Dambulla Dedicated Economic Centre",
+      "province": "Central",
+      "distance_km_from_farm": 68,
+      "transport_cost_per_kg_lkr": 18.5,
+      "unloading_and_porter_fee_per_50kg_bag_lkr": 120,
+      "commission_rate_percentage": 4.0,
+      "trading_days": "All days (Peak trading: Sun, Tue, Thu)",
+      "market_capacity_rating": "Very High",
+      "price_volatility": "High"
+    },
+    {
+      "center_id": "DEC-MEE",
+      "name": "Meegoda Dedicated Economic Centre",
+      "province": "Western",
+      "distance_km_from_farm": 124,
+      "transport_cost_per_kg_lkr": 32.0,
+      "unloading_and_porter_fee_per_50kg_bag_lkr": 150,
+      "commission_rate_percentage": 5.0,
+      "trading_days": "All days (Early morning retail/wholesale)",
+      "market_capacity_rating": "Medium",
+      "price_volatility": "Moderate"
+    },
+    {
+      "center_id": "DEC-PET",
+      "name": "Pettah Wholesale Market (Manning Market)",
+      "province": "Western",
+      "distance_km_from_farm": 118,
+      "transport_cost_per_kg_lkr": 28.0,
+      "unloading_and_porter_fee_per_50kg_bag_lkr": 160,
+      "commission_rate_percentage": 4.5,
+      "trading_days": "Daily midnight to morning",
+      "market_capacity_rating": "Very High",
+      "price_volatility": "High"
+    },
+    {
+      "center_id": "DEC-KEP",
+      "name": "Keppetipola Dedicated Economic Centre",
+      "province": "Uva",
+      "distance_km_from_farm": 82,
+      "transport_cost_per_kg_lkr": 22.0,
+      "unloading_and_porter_fee_per_50kg_bag_lkr": 110,
+      "commission_rate_percentage": 4.0,
+      "trading_days": "Mon, Wed, Fri",
+      "market_capacity_rating": "Medium",
+      "price_volatility": "Moderate"
+    },
+    {
+      "center_id": "DEC-THAM",
+      "name": "Thambuththegama Dedicated Economic Centre",
+      "province": "North Central",
+      "distance_km_from_farm": 105,
+      "transport_cost_per_kg_lkr": 25.0,
+      "unloading_and_porter_fee_per_50kg_bag_lkr": 115,
+      "commission_rate_percentage": 3.5,
+      "trading_days": "Daily",
+      "market_capacity_rating": "Medium",
+      "price_volatility": "Moderate"
+    },
+    {
+      "center_id": "DEC-KAN",
+      "name": "Kandy Central Wholesale Market",
+      "province": "Central",
+      "distance_km_from_farm": 42,
+      "transport_cost_per_kg_lkr": 14.0,
+      "unloading_and_porter_fee_per_50kg_bag_lkr": 130,
+      "commission_rate_percentage": 5.0,
+      "trading_days": "Daily",
+      "market_capacity_rating": "Medium-High",
+      "price_volatility": "Low"
+    }
+  ],
+  "grading_quality_matrix": [
+    {
+      "grade": "Grade A (Seed & Export Quality)",
+      "rhizome_weight_min_grams": 150,
+      "moisture_content_pct": "80 - 85%",
+      "blemish_tolerance_pct": 2.0,
+      "price_adjustment_multiplier": 1.15,
+      "recommended_use": "Primary seed rhizome conservation and prime wholesale lots"
+    },
+    {
+      "grade": "Grade B (Standard Commercial)",
+      "rhizome_weight_min_grams": 75,
+      "moisture_content_pct": "78 - 85%",
+      "blemish_tolerance_pct": 8.0,
+      "price_adjustment_multiplier": 1.0,
+      "recommended_use": "Direct wholesale distribution to urban markets"
+    },
+    {
+      "grade": "Grade C (Processing / Small)",
+      "rhizome_weight_min_grams": 30,
+      "moisture_content_pct": "75 - 85%",
+      "blemish_tolerance_pct": 20.0,
+      "price_adjustment_multiplier": 0.72,
+      "recommended_use": "Local spice mills, dry ginger processing, oil extraction"
+    }
+  ],
+  "weather_risk_adjustments": {
+    "dry_clear": {
+      "harvesting_condition": "Optimal",
+      "field_rot_risk": "Low (< 2%)",
+      "delay_harvest_permitted_weeks": 4,
+      "spoilage_factor": 1.0
+    },
+    "moderate_rain": {
+      "harvesting_condition": "Fair",
+      "field_rot_risk": "Moderate (5 - 8%)",
+      "delay_harvest_permitted_weeks": 2,
+      "spoilage_factor": 1.06
+    },
+    "heavy_monsoon_risk": {
+      "harvesting_condition": "Critical",
+      "field_rot_risk": "Severe (> 20% rhizome soft rot)",
+      "delay_harvest_permitted_weeks": 0,
+      "spoilage_factor": 1.25
+    }
+  },
+  "weekly_market_bulletin_series": [
+    {
+      "bulletin_week": 26,
+      "date_range": "26 Jun - 02 Jul 2026",
+      "month": "June",
+      "farmgate_price_lkr": 420,
+      "wholesale_avg_lkr": 490,
+      "retail_avg_lkr": 680,
+      "dambulla_wholesale_range_lkr": [
+        460,
+        510
+      ],
+      "meegoda_wholesale_range_lkr": [
+        500,
+        560
+      ],
+      "pettah_wholesale_range_lkr": [
+        480,
+        540
+      ],
+      "supply_inflow_status": "High (Maha harvest glut)",
+      "market_sentiment": "Bearish"
+    },
+    {
+      "bulletin_week": 28,
+      "date_range": "10 Jul - 16 Jul 2026",
+      "month": "July",
+      "farmgate_price_lkr": 450,
+      "wholesale_avg_lkr": 520,
+      "retail_avg_lkr": 710,
+      "dambulla_wholesale_range_lkr": [
+        490,
+        540
+      ],
+      "meegoda_wholesale_range_lkr": [
+        530,
+        590
+      ],
+      "pettah_wholesale_range_lkr": [
+        510,
+        570
+      ],
+      "supply_inflow_status": "Moderate",
+      "market_sentiment": "Stable"
+    },
+    {
+      "bulletin_week": 30,
+      "date_range": "24 Jul - 30 Jul 2026",
+      "month": "July",
+      "farmgate_price_lkr": 510,
+      "wholesale_avg_lkr": 590,
+      "retail_avg_lkr": 790,
+      "dambulla_wholesale_range_lkr": [
+        560,
+        620
+      ],
+      "meegoda_wholesale_range_lkr": [
+        610,
+        670
+      ],
+      "pettah_wholesale_range_lkr": [
+        580,
+        650
+      ],
+      "supply_inflow_status": "Moderate",
+      "market_sentiment": "Firm"
+    },
+    {
+      "bulletin_week": 32,
+      "date_range": "07 Aug - 13 Aug 2026",
+      "month": "August",
+      "farmgate_price_lkr": 590,
+      "wholesale_avg_lkr": 670,
+      "retail_avg_lkr": 880,
+      "dambulla_wholesale_range_lkr": [
+        630,
+        710
+      ],
+      "meegoda_wholesale_range_lkr": [
+        690,
+        760
+      ],
+      "pettah_wholesale_range_lkr": [
+        660,
+        730
+      ],
+      "supply_inflow_status": "Declining",
+      "market_sentiment": "Bullish"
+    },
+    {
+      "bulletin_week": 34,
+      "date_range": "21 Aug - 27 Aug 2026",
+      "month": "August",
+      "farmgate_price_lkr": 670,
+      "wholesale_avg_lkr": 760,
+      "retail_avg_lkr": 990,
+      "dambulla_wholesale_range_lkr": [
+        720,
+        800
+      ],
+      "meegoda_wholesale_range_lkr": [
+        780,
+        850
+      ],
+      "pettah_wholesale_range_lkr": [
+        750,
+        830
+      ],
+      "supply_inflow_status": "Low",
+      "market_sentiment": "Bullish"
+    },
+    {
+      "bulletin_week": 36,
+      "date_range": "04 Sep - 10 Sep 2026",
+      "month": "September",
+      "farmgate_price_lkr": 780,
+      "wholesale_avg_lkr": 890,
+      "retail_avg_lkr": 1140,
+      "dambulla_wholesale_range_lkr": [
+        840,
+        930
+      ],
+      "meegoda_wholesale_range_lkr": [
+        910,
+        990
+      ],
+      "pettah_wholesale_range_lkr": [
+        880,
+        960
+      ],
+      "supply_inflow_status": "Scare (Off-season shortage)",
+      "market_sentiment": "Peak"
+    },
+    {
+      "bulletin_week": 37,
+      "date_range": "11 Sep - 17 Sep 2026",
+      "month": "September",
+      "farmgate_price_lkr": 820,
+      "wholesale_avg_lkr": 940,
+      "retail_avg_lkr": 1220,
+      "dambulla_wholesale_range_lkr": [
+        890,
+        980
+      ],
+      "meegoda_wholesale_range_lkr": [
+        960,
+        1050
+      ],
+      "pettah_wholesale_range_lkr": [
+        920,
+        1020
+      ],
+      "supply_inflow_status": "Scare",
+      "market_sentiment": "Peak"
+    },
+    {
+      "bulletin_week": 38,
+      "date_range": "18 Sep - 24 Sep 2026",
+      "month": "September",
+      "farmgate_price_lkr": 790,
+      "wholesale_avg_lkr": 910,
+      "retail_avg_lkr": 1180,
+      "dambulla_wholesale_range_lkr": [
+        860,
+        950
+      ],
+      "meegoda_wholesale_range_lkr": [
+        930,
+        1020
+      ],
+      "pettah_wholesale_range_lkr": [
+        890,
+        970
+      ],
+      "supply_inflow_status": "Slight Inflow",
+      "market_sentiment": "Plateau"
+    },
+    {
+      "bulletin_week": 40,
+      "date_range": "02 Oct - 08 Oct 2026",
+      "month": "October",
+      "farmgate_price_lkr": 680,
+      "wholesale_avg_lkr": 770,
+      "retail_avg_lkr": 1020,
+      "dambulla_wholesale_range_lkr": [
+        720,
+        810
+      ],
+      "meegoda_wholesale_range_lkr": [
+        790,
+        870
+      ],
+      "pettah_wholesale_range_lkr": [
+        760,
+        840
+      ],
+      "supply_inflow_status": "Rising (Early Yala harvests)",
+      "market_sentiment": "Declining"
+    },
+    {
+      "bulletin_week": 42,
+      "date_range": "16 Oct - 22 Oct 2026",
+      "month": "October",
+      "farmgate_price_lkr": 560,
+      "wholesale_avg_lkr": 640,
+      "retail_avg_lkr": 860,
+      "dambulla_wholesale_range_lkr": [
+        600,
+        680
+      ],
+      "meegoda_wholesale_range_lkr": [
+        660,
+        730
+      ],
+      "pettah_wholesale_range_lkr": [
+        620,
+        700
+      ],
+      "supply_inflow_status": "High",
+      "market_sentiment": "Bearish"
+    }
+  ]
+}
