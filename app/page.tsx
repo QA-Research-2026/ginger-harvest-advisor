@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Leaf, 
-  TrendingUp, 
-  CloudRain, 
-  MapPin, 
-  Sprout, 
+import {
+  Leaf,
+  TrendingUp,
+  CloudRain,
+  MapPin,
+  Sprout,
   AlertTriangle,
   Scale,
   Calendar,
@@ -44,14 +44,14 @@ export default function Home() {
   const [currentSpotPriceLkr, setCurrentSpotPriceLkr] = useState<number>(850);
   const [maturityWeek, setMaturityWeek] = useState<number>(38);
   const [weatherRisk, setWeatherRisk] = useState<string>('Dry/Stable');
-  
+
   const [loading, setLoading] = useState<boolean>(false);
   const [result, setResult] = useState<APIResponse | null>(null);
 
   const fetchSchedule = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/schedule', {
+      const res = await fetch('/api/schedules', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -73,7 +73,7 @@ export default function Home() {
 
   useEffect(() => {
     fetchSchedule();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const seedRhizomeRequiredKg = plotSize * 1500;
@@ -88,11 +88,11 @@ export default function Home() {
       </div>
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 relative z-10">
-        
+
         {/* Header Section */}
         <header className="mb-12 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 border-b border-white/5 pb-8">
           <div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-4"
@@ -100,7 +100,7 @@ export default function Home() {
               <Sprout className="w-4 h-4" />
               <span>Smart Agriculture</span>
             </motion.div>
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -108,7 +108,7 @@ export default function Home() {
             >
               Ginger Harvest Advisor
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -123,7 +123,7 @@ export default function Home() {
         {/* Fallback Banner */}
         <AnimatePresence>
           {result?.status === 'fallback' && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, height: 0, marginBottom: 0 }}
               animate={{ opacity: 1, height: 'auto', marginBottom: 32 }}
               exit={{ opacity: 0, height: 0, marginBottom: 0 }}
@@ -139,12 +139,12 @@ export default function Home() {
         </AnimatePresence>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
+
           {/* Left Column: Inputs & Metrics */}
           <div className="lg:col-span-4 space-y-6">
-            
+
             {/* Input Form Panel */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="bg-slate-900/60 backdrop-blur-xl border border-white/10 p-6 rounded-3xl shadow-2xl"
@@ -155,7 +155,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-xl font-semibold text-white">Farm Variables</h2>
               </div>
-              
+
               <div className="space-y-5">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-400 flex items-center gap-2">
@@ -163,7 +163,7 @@ export default function Home() {
                   </label>
                   <input type="number" step="0.1" value={plotSize} onChange={(e) => setPlotSize(parseFloat(e.target.value) || 0)} className="w-full bg-black/40 border border-white/5 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all shadow-inner" />
                 </div>
-                
+
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-400 flex items-center gap-2">
                     <PackageCheck className="w-4 h-4" /> Est. Yield (kg)
@@ -197,8 +197,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <button 
-                onClick={fetchSchedule} 
+              <button
+                onClick={fetchSchedule}
                 disabled={loading}
                 className="w-full mt-8 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transform hover:-translate-y-0.5"
               >
@@ -214,10 +214,10 @@ export default function Home() {
 
           {/* Right Column: Results & Visualizations */}
           <div className="lg:col-span-8 space-y-6">
-            
+
             {/* Top Metrics Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
                 className="bg-slate-900/40 backdrop-blur-md border border-white/5 rounded-3xl p-5 relative overflow-hidden group"
               >
@@ -231,7 +231,7 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
                 className="bg-slate-900/40 backdrop-blur-md border border-white/5 rounded-3xl p-5 relative overflow-hidden group"
               >
@@ -245,14 +245,14 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
                 className="bg-gradient-to-br from-emerald-900/40 to-teal-900/40 backdrop-blur-md border border-emerald-500/20 rounded-3xl p-5 relative overflow-hidden group"
               >
                 <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-emerald-500/20 rounded-full blur-2xl group-hover:bg-emerald-500/30 transition-colors" />
                 <p className="text-emerald-200/80 text-sm font-medium mb-2 relative z-10">Proj. Gross Revenue</p>
                 <div className="flex items-baseline gap-2 relative z-10">
-                  <span className="text-xl text-emerald-400/80 font-medium">LKR</span> 
+                  <span className="text-xl text-emerald-400/80 font-medium">LKR</span>
                   <p className="text-3xl font-bold text-white">
                     {result?.data?.projectedGrossRevenueLkr ? result.data.projectedGrossRevenueLkr.toLocaleString() : '---'}
                   </p>
@@ -262,9 +262,9 @@ export default function Home() {
 
             {/* Results Area */}
             {result?.data ? (
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 className="space-y-6"
               >
                 {/* Market Assessment */}
@@ -322,7 +322,7 @@ export default function Home() {
                     </table>
                   </div>
                 </div>
-                
+
                 {/* Seed Stock Protocol */}
                 <div className="bg-gradient-to-r from-indigo-900/30 to-purple-900/30 backdrop-blur-md border border-indigo-500/20 rounded-3xl p-6 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl" />
