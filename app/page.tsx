@@ -51,7 +51,7 @@ export default function Home() {
   const fetchSchedule = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/schedules', {
+      const res = await fetch('/api/schedule', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
